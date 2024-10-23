@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wl5HdZsccF0k5BUnP4mYwI2hMqyrnWJW4ENpUkspDWs=",
+  "Source": "CandidateManagementAPI",
+  "BasePath": "_content/CandidateManagementAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

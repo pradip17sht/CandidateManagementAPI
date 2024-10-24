@@ -1,4 +1,5 @@
 using CandidateManagementAPI.Data;
+using CandidateManagementAPI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,13 @@ builder.Services.AddSwaggerGen();
 // Add DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Add Caching
+builder.Services.AddMemoryCache();
+
+// Register services
+builder.Services.AddScoped<ICandidateService, CandidateService>();
+builder.Services.AddSingleton<ICacheManager, InMemoryCacheManager>();
 
 var app = builder.Build();
 
